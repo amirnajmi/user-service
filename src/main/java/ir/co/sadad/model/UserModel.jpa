@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" ptype="MICROSERVICE" ppkg="ir.co.sadad" epkg="domain" v="5.2" rws="_154248596272987" Pws="_154248596272987" cws="_154248596272987" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_154248596272986" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity compositePrimaryKeyClass="UserPK" abs="false" class="User" v="true" jbn="false" xre="false" m="false" rootElement="_154248596272986" id="_154248598116288">
+        <jpa:ath>ammac</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_1542486115318100">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="lastName" id="_1542486119255101">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="nationalCode" id="_1542486196523109">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="mobile" id="_1542486207669110">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="email" id="_1542573608944189">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="accountId" id="_1542573850796196">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_154248598116389">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="User.findAll">
+            <jpa:query>Select e from User e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByName">
+            <jpa:query>Select u from User u where u.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByLastName">
+            <jpa:query>Select u from User u where u.lastName=:lastName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByUserName">
+            <jpa:query>Select u from User u where u.userName=:userName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByPassword">
+            <jpa:query>Select u from User u where u.password=:password</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByNationalCode">
+            <jpa:query>Select u from User u where u.nationalCode=:nationalCode</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByMobile">
+            <jpa:query>Select u from User u where u.mobile=:mobile</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByEmail">
+            <jpa:query>Select u from User u where u.email=:email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByEmail">
+            <jpa:query>Select u from User u where u.email=:email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="User.findByAccountId">
+            <jpa:query>Select u from User u where u.accountId=:accountId</jpa:query>
+        </jpa:nq>
+        <jpa:inheritance strategy="JOINED"/>
+        <jpa:discriminator-value></jpa:discriminator-value>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="EmployeePK" abs="false" class="Employee" superclassId="_154248598116288" v="true" jbn="false" xre="false" m="false" rootElement="_154248596272986" id="_154248605194091">
+        <jpa:ath>ammac</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="employeeNo" id="_154248610966999">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Employee.findAll">
+            <jpa:query>Select e from Employee e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Employee.findByEmployeeNo">
+            <jpa:query>Select e from Employee e where e.employeeNo=:employeeNo</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="StudentPK" abs="false" class="Student" superclassId="_154248598116288" v="true" jbn="false" xre="false" m="false" rootElement="_154248596272986" id="_154248605410394">
+        <jpa:ath>ammac</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="studentNo" id="_1542486179019107">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Student.findAll">
+            <jpa:query>Select e from Student e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Student.findByStudentNo">
+            <jpa:query>Select s from Student s where s.studentNo=:studentNo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Student.findByMajor">
+            <jpa:query>Select s from Student s where s.major=:major</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Student.findByAttribute">
+            <jpa:query>Select s from Student s where s.attribute=:attribute</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="TeacherPK" abs="false" class="Teacher" superclassId="_154248598116288" v="true" jbn="false" xre="false" m="false" rootElement="_154248596272986" id="_1542574755394197">
+        <jpa:ath>ammac</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="teacherNo" id="_1542574755394201">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:basic>
+        </jpa:attributes>
+        <jpa:nq e="false" name="teacherNo.findAll">
+            <jpa:query>Select e from teacherNo e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="teacherNo.findByName">
+            <jpa:query>Select t from teacherNo t where t.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="teacherNo.findByLastName">
+            <jpa:query>Select t from teacherNo t where t.lastName=:lastName</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Teacher.findByTeacherNo">
+            <jpa:query>Select t from teacherNo t where t.teacherNo=:teacherNo</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="teacherNo.findByEmail">
+            <jpa:query>Select t from teacherNo t where t.email=:email</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="teacherNo.findByMobileNo">
+            <jpa:query>Select t from teacherNo t where t.mobileNo=:mobileNo</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_154248596272987">
+            <i ref="_154248605410394" x="137" y="260"/>
+            <i ref="_1542574755394197" x="321" y="359"/>
+            <i ref="_154248598116288" x="325" y="21"/>
+            <i ref="_154248605194091" x="453" y="260"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>
